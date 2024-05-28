@@ -50,3 +50,18 @@ bool Draw() {
     }
     return true;
 }
+
+int main() {
+    Board();
+    Move('A',2);
+    Player();
+    Move('A', 2);
+    Player();
+    Move('C', 2);
+
+    Draw();
+    Board();
+
+    return 0;
+}
+
