@@ -20,3 +20,12 @@ void Board() {
     cout << endl;
 }
 
+void Player() {
+    if (player == 'X') {
+        player = 'O';
+    }
+    else {
+        player = 'X';
+    }
+}
+
