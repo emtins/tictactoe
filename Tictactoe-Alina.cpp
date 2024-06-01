@@ -10,7 +10,7 @@ char board[Size][Size] = { {' ',' ',' '}, {' ',' ',' '}, {' ',' ',' '} };
 char player = 'X';
 
 
-void TicTacToe::Board() {
+void Board() {
     cout << "  A  B  C" << endl;
     for (int i = 0; i < Size; i++) {
         cout << i + 1 << " ";
@@ -24,7 +24,7 @@ void TicTacToe::Board() {
     cout << endl;
 }
 
-void TicTacToe::Player() {
+void Player() {
     if (player == 'X') {
         player = 'O';
     }
@@ -33,7 +33,7 @@ void TicTacToe::Player() {
     }
 }
 
-bool TicTacToe::Move(char col, int row) {
+bool Move(char col, int row) {
     int c = col - 'A';
     int r = row - 1;
     if (c < 0 || c >= Size || r < 0 || r >= Size || board[r][c] == 'X' || board[r][c] == 'O') {
@@ -44,7 +44,7 @@ bool TicTacToe::Move(char col, int row) {
     return true;
 }
 
-bool TicTacToe::Draw() {
+bool Draw() {
     for (int i = 0; i < Size; i++) {
         for (int j = 0; j < Size; j++) {
             if (board[i][j] != 'X' && board[i][j] != 'O') {
