@@ -23,5 +23,8 @@
     <ClInclude Include="TictactoeAlina.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="TicTacToe_Inna.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
