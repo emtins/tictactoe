@@ -1,4 +1,5 @@
 #include"TicTacToe_Inna.h"
+#include"TictactoeAlina.h"
 
 bool GetRow(string player, int& row)
 {
@@ -23,4 +24,18 @@ void GetMove(string player, int& row, char& col)
 {
     while (!GetRow(player, row));
     while (!GetCol(col));
+}
+bool PlayerMove(int playerNumber, char mark)
+{
+    int row1;
+    char col1;
+    GetMove(playerNumber == 1 ? "Player 1:" : "Player 2:", row1, col1);
+    player = mark;
+    while (!Move(col1, row1))
+    {
+        GetMove(playerNumber == 1 ? "Player 1:" : "Player 2:", row1, col1);
+    }
+    system("cls");
+    Board();
+    return WinLogic(mark);
 }
