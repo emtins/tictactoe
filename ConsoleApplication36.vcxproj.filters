@@ -18,11 +18,14 @@
     <ClCompile Include="Tictactoe-Alina.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TicTacToe_Inna.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TictactoeAlina.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="TicTacToe_Inna.h">
       <Filter>Header Files</Filter>
     </ClInclude>

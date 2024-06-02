@@ -127,7 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="Tictactoe-Alina.cpp" />
+    <ClCompile Include="TicTacToe_Inna.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TictactoeAlina.h" />

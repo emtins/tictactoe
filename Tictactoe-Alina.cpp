@@ -10,6 +10,15 @@ char board[Size][Size] = { {' ',' ',' '}, {' ',' ',' '}, {' ',' ',' '} };
 char player = 'X';
 
 
+char GetBoard(int i, int j) {
+    return board[i][j];
+}
+
+void SetPlayer(char p)
+{
+    player = p;
+}
+
 void Board() {
     cout << "  A  B  C" << endl;
     for (int i = 0; i < Size; i++) {

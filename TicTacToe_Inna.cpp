@@ -1,9 +1,24 @@
 #include"TicTacToe_Inna.h"
 #include"TictactoeAlina.h"
 
+bool WinLogic(char symb)
+{
+    for (int i = 0; i < 3; i++)
+    {
+        if ((GetBoard(i,0) == symb && GetBoard(i,1) == symb && GetBoard(i, 2) == symb) ||
+            (GetBoard(0,i) == symb && GetBoard(1, i) == symb && GetBoard(2,i) == symb))
+            return true;
+    }
+    if ((GetBoard(0, 0) == symb && GetBoard(1,1) == symb && GetBoard(2,2) == symb) ||
+        (GetBoard(0,2) == symb && GetBoard(1,1) == symb && GetBoard(2,0) == symb))
+        return true;
+    return false;
+}
+
+
 bool GetRow(string player, int& row)
 {
-    cout << player << "\nenter line coordinates (1-3):     ";
+    cout << player << "\nenter line coordinates (1-3):      ";
     cin >> row;
     if (row != 1 && row != 2 && row != 3)
         return false;
@@ -30,7 +45,7 @@ bool PlayerMove(int playerNumber, char mark)
     int row1;
     char col1;
     GetMove(playerNumber == 1 ? "Player 1:" : "Player 2:", row1, col1);
-    player = mark;
+    SetPlayer( mark);
     while (!Move(col1, row1))
     {
         GetMove(playerNumber == 1 ? "Player 1:" : "Player 2:", row1, col1);
